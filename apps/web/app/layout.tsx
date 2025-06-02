@@ -1,30 +1,31 @@
-import { Geist, Geist_Mono } from "next/font/google"
+import { Inter } from "next/font/google";
 
-import "@workspace/ui/globals.css"
-import { Providers } from "@/components/providers"
+import "@workspace/ui/globals.css";
+import { Viewport } from "next";
+import { TRPCReactProvider } from "~/trpc/react";
 
-const fontSans = Geist({
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-sans",
-})
+  fallback: ["sans-serif"],
+});
 
-const fontMono = Geist_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-})
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${fontSans.variable} ${fontMono.variable} font-sans antialiased `}
-      >
-        <Providers>{children}</Providers>
+      <body className={`${inter.className} font-sans antialiased `}>
+        <TRPCReactProvider>{children}</TRPCReactProvider>
       </body>
     </html>
-  )
+  );
 }
