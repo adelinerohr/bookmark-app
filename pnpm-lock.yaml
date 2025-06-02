@@ -10,10 +10,10 @@ importers:
     devDependencies:
       '@workspace/eslint-config':
         specifier: workspace:*
-        version: link:packages/eslint-config
+        version: link:tooling/eslint-config
       '@workspace/typescript-config':
         specifier: workspace:*
-        version: link:packages/typescript-config
+        version: link:tooling/typescript-config
       prettier:
         specifier: ^3.5.1
         version: 3.5.1
@@ -56,54 +56,15 @@ importers:
         version: 19.0.4(@types/react@19.0.10)
       '@workspace/eslint-config':
         specifier: workspace:^
-        version: link:../../packages/eslint-config
+        version: link:../../tooling/eslint-config
       '@workspace/typescript-config':
         specifier: workspace:*
-        version: link:../../packages/typescript-config
+        version: link:../../tooling/typescript-config
       typescript:
         specifier: ^5.7.3
         version: 5.7.3
 
-  packages/eslint-config:
-    devDependencies:
-      '@next/eslint-plugin-next':
-        specifier: ^15.1.7
-        version: 15.1.7
-      '@typescript-eslint/eslint-plugin':
-        specifier: ^8.24.1
-        version: 8.24.1(@typescript-eslint/parser@8.24.1(eslint@9.20.1(jiti@2.4.2))(typescript@5.7.3))(eslint@9.20.1(jiti@2.4.2))(typescript@5.7.3)
-      '@typescript-eslint/parser':
-        specifier: ^8.24.1
-        version: 8.24.1(eslint@9.20.1(jiti@2.4.2))(typescript@5.7.3)
-      eslint:
-        specifier: ^9.20.1
-        version: 9.20.1(jiti@2.4.2)
-      eslint-config-prettier:
-        specifier: ^9.1.0
-        version: 9.1.0(eslint@9.20.1(jiti@2.4.2))
-      eslint-plugin-only-warn:
-        specifier: ^1.1.0
-        version: 1.1.0
-      eslint-plugin-react:
-        specifier: ^7.37.4
-        version: 7.37.4(eslint@9.20.1(jiti@2.4.2))
-      eslint-plugin-react-hooks:
-        specifier: ^5.1.0
-        version: 5.1.0(eslint@9.20.1(jiti@2.4.2))
-      eslint-plugin-turbo:
-        specifier: ^2.4.2
-        version: 2.4.2(eslint@9.20.1(jiti@2.4.2))(turbo@2.4.2)
-      globals:
-        specifier: ^15.15.0
-        version: 15.15.0
-      typescript:
-        specifier: ^5.7.3
-        version: 5.7.3
-      typescript-eslint:
-        specifier: ^8.24.1
-        version: 8.24.1(eslint@9.20.1(jiti@2.4.2))(typescript@5.7.3)
-
-  packages/typescript-config: {}
+  packages/database: {}
 
   packages/ui:
     dependencies:
@@ -155,16 +116,57 @@ importers:
         version: 19.0.4(@types/react@19.0.10)
       '@workspace/eslint-config':
         specifier: workspace:*
-        version: link:../eslint-config
+        version: link:../../tooling/eslint-config
       '@workspace/typescript-config':
         specifier: workspace:*
-        version: link:../typescript-config
+        version: link:../../tooling/typescript-config
       tailwindcss:
         specifier: ^4.0.8
         version: 4.0.8
       typescript:
         specifier: ^5.7.3
         version: 5.7.3
+
+  tooling/eslint-config:
+    devDependencies:
+      '@next/eslint-plugin-next':
+        specifier: ^15.1.7
+        version: 15.1.7
+      '@typescript-eslint/eslint-plugin':
+        specifier: ^8.24.1
+        version: 8.24.1(@typescript-eslint/parser@8.24.1(eslint@9.20.1(jiti@2.4.2))(typescript@5.7.3))(eslint@9.20.1(jiti@2.4.2))(typescript@5.7.3)
+      '@typescript-eslint/parser':
+        specifier: ^8.24.1
+        version: 8.24.1(eslint@9.20.1(jiti@2.4.2))(typescript@5.7.3)
+      eslint:
+        specifier: ^9.20.1
+        version: 9.20.1(jiti@2.4.2)
+      eslint-config-prettier:
+        specifier: ^9.1.0
+        version: 9.1.0(eslint@9.20.1(jiti@2.4.2))
+      eslint-plugin-only-warn:
+        specifier: ^1.1.0
+        version: 1.1.0
+      eslint-plugin-react:
+        specifier: ^7.37.4
+        version: 7.37.4(eslint@9.20.1(jiti@2.4.2))
+      eslint-plugin-react-hooks:
+        specifier: ^5.1.0
+        version: 5.1.0(eslint@9.20.1(jiti@2.4.2))
+      eslint-plugin-turbo:
+        specifier: ^2.4.2
+        version: 2.4.2(eslint@9.20.1(jiti@2.4.2))(turbo@2.4.2)
+      globals:
+        specifier: ^15.15.0
+        version: 15.15.0
+      typescript:
+        specifier: ^5.7.3
+        version: 5.7.3
+      typescript-eslint:
+        specifier: ^8.24.1
+        version: 8.24.1(eslint@9.20.1(jiti@2.4.2))(typescript@5.7.3)
+
+  tooling/typescript-config: {}
 
 packages:
 
