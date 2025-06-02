@@ -5,6 +5,10 @@
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
+    "db:generate": "pnpm -F database generate",
+    "db:migrate": "pnpm -F database migrate",
+    "db:push": "pnpm -F database push",
+    "db:studio": "pnpm -F database studio",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
